@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>hcn</title>
+</head>
+<body>
+<script>
+    function rectangle(length, width){
+      this.length=length;
+      this.width=width;
+        this.getwidth=function () {
+            return this.width;
+        }
+
+        this.setwidth=function (width) {
+            this.width = width;
+        }
+  this.getperimeter=function ()
+  {
+      return 2 * (this.length + this.width);
+  }
+  this.getacreage=function ()
+  {
+      return this.length*this.width;
+  }
+    }
+    let a=parseFloat(prompt("enter length"));
+    let b=parseFloat(prompt("enter width"));
+    let rectangle1=new rectangle(a,b);
+    let perimeter=rectangle1.getperimeter();
+    let acreage=rectangle1.getacreage();
+    alert("perimeter= "+perimeter.toFixed(2));
+    alert("acreage= "+acreage.toFixed(2));
+</script>
+</body>
+</html>
